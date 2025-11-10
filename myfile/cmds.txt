@@ -1,0 +1,166 @@
+uname-->os type
+uname -r-->os kernal version
+uname -a-->os complete info
+uptime
+uptime -p
+hostname
+hostname -i-->private ip
+hostnamectl set-hostname devops
+ifconfig-->privateip
+ip route
+ip addr
+date
+timedatectl-->timezone
+timedatectl set-timezone Asia/Kolkata
+clear/Cntrl L
+date +"%d"--> to prit the date
+date +"%m"-->to print month
+date +"%Y"-->to print year
+date +"%H"--> to print hours
+date +"%M"--> to print minuites
+date +"%S"-> to print seconds
+date +"%D"-> 22/05/2025
+date +"%F"-->2025-26-2
+date +"%A"-->day
+date +"%B"-->month
+ps->processers
+kill -9 PID-> kill the processer
+=========
+Hardware commnds
+==========
+lscpu
+free
+free -m
+free -g
+free -h
+df -h
+history
+whoami-->present user nam-->root
+=============
+cntrl u--delte line
+cntrl a--curser to starting 
+cntrl e-- curser to ending
+file commands
+===========
+ll-->long list
+ls-->short list
+touch filename
+touch aws amazon flipkart
+touch file{1..7}
+touch app.py-->to create python file
+rm aws-->remove aws file-->this ill ask permission "y"
+rm -f aws azure gcp-->multiple files removes
+rm -f app.java-->forcefull remove with out sking permission
+rm -f *-->remove all files
+rm -f *.java-->to remove all java related files
+rm -f a*-->remove only starting with a letter files
+=====
+mkdir devops-->create directory
+ll
+starting with - =regular file(txt based file)
+starting with d- directoty file(folder)
+starting with c-char file
+starting with b= blocked files(EBS volumefiles)
+=======
+mkdir folder1 folder2 folder3
+mkdir seshu{1..5}
+rmdir devops-->to remove empty folder
+rmdir seshu*-->to remove seshu related folder
+rmdir *-->to remve all folders
+====
+pwd-->present working directory
+cd seshu-->change directory
+cd -->current directory to root directory
+cd -  back to same directory
+cd ../-->back to one folder
+cd ../../back to 2 folders
+cd ../../../-->back to 3 folders
+cd foldername--> go to the foldername
+ll filename--> to check the files in the folder
+rm -rf folder-->remove non empty folder
+rm -f *-> remove all files only
+rmdir *--> remove all folders
+rm -rf *-> remove all folders and files
+============
+touch devops/linux-->create file in folder
+touch devops/docker devops/teraform-->create files in folder
+touch devops/file{1..3}
+mkdir devops/python-->create folder in folder
+mkdir -p musfa/flm
+cat filename --> to check data is exit /not
+cat>jenkinsfile-->to add data
+welcome to devops
+cat>>jenkinsfile->to add more data
+welcome to devops and linux
+cntrlD-->save
+>-->overwrites the data
+>>-->appends the data
+head jenkinsfile-->1st 10lines of data
+sed -n '3,16p' jenknsfile--> 3 to 16 lines print
+head -5 jenkinsfile-->1st 5 lines
+tail -5 jenkinsfile-->last 5 lines
+cat -n jenkinsfile-->it repesents line numbers
+sed -n '14p'filename-->print 14th line only
+=====
+cp source destination
+cp jenkinsfile dockerfile--> data transfer from jenkins to docker and it overwirties
+cat>mustafa
+hi my name is seshu
+cat>kartik
+my name is karthik
+im learning devops
+cp karthik >> smustafa--> data transfre from kartik to mustafa and its appends the data
+mv karthik mustafa
+================
+
+
+
+
+===============
+cat /etc/passwd or getent passwd-->see thelist of users
+cat /etc/group pr getent group--> see the list of groups
+id username-->to see the user
+ll /home/ --> to see the created users
+useradd username
+userdel -r username->this will del user with entire path
+group add grpname
+groupdel groupname
+su - seshu-->to enter the user from root
+exit-->to exit the seshu user to root
+passwd seshu-->to add thepasswd of the user
+usermod -aG yadlagroup seshuuser-->to add the user in group->we cant add multiple users at a time
+touch amaznflipkrt meesho
+useradd infosys
+groupdd tcs
+chown infosys amazonfilename-->this will change from root user to infosys user 
+chgrp tcs amazonfile-->this willchnage from root grp to tcs grp
+chown infosys:tcs amazonfilename-->this will user nd grp at atime
+chown infosys:tcs * -->this will chnage all files
+chown infosys:tcs amazon flipkart meesho
+chown root:root * --> back to root permisions
+chown infosys:tcs fol--> this will change the persions to only folder1 not for files inside the fold
+chown -R infosys:tcs fol-->this change the permission to folder and inside files also
+chown root:root fold/* -->this with change on inside files but not folder permission 
+==========
+grep-->used to search a word from file or any output
+grep "word" filename
+vim myfile-->craete a file
+grep -n "registry" myfile-->it will print includes line number
+grep -in "Registry" myfile-->it will print case sentensitive aswell
+grep -c "Registry" myfile-->count
+grep -ci "Registry" myfile-->it will print includes count of word also
+grep -in -e "not" -e "storage"-e "memory" myfile-->e is echo to print the data
+grep -in "that" myfile flm-->to check word in multiple files
+grep -in -e "that" -e "not" myfile flm-->multiple words in multiple files
+getent passwd| grep -i "root"--> to find the root user only
+find path -name filename
+find . -name ibm--> . means all folder in current directory
+find . -type f -name aws-->to find files
+find . -type d -name aws--> to find the folder
+find . -type f -user flm-->to find the flm user files in curent directory
+find . -type f -user ! flm-->not having flm user in current directorry
+find . -type f -perm 777--> need full permission files 
+find . -type f ! -perm 777--> not full permisions files
+updatedb before use locate cmd
+locate "gcp"--> to get the gcp files
+locate "azure"--> to get azure files
